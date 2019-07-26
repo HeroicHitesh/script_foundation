@@ -26,9 +26,9 @@
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.jpg" height="40" width="40"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./events.html"><span class="fa fa-list fa-lg"></span> Events</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact Us</a></li>
                 </ul>
                 <span class="navbar-text">
@@ -76,6 +76,54 @@
         </div>
     </div>
 
+    <div class="modal fade" id="reserveTable" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Attend the Event</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="guest" class="col-12 col-sm-2 col-form-label">Number of Attendees</label>
+                            <div class="col-12 col-sm-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="dateTime" class="col-12 col-sm-2 col-form-label">Name and Email</label>
+                            <div class="col-12 col-sm-3">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+                            <div class="col-12 col-sm-3">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md">
+                                <button type="button" class="btn btn-danger" id="cancelReserveBtn">Cancel</button> 
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -86,11 +134,22 @@
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.jpg" class="img-fluid" height="300" width="300">
                 </div>
+                <div class="col-12 col-sm align-self-center">
+                    <button class="btn btn-block btn-warning btn-sm" id="reserveTableBtn"
+                        title="Or Call us at <br><strong>+852 12345678</strong></br>">Reserve Seat</button>
+                </div>
             </div>
         </div>
     </header>
 
     <div class="container">
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active">Events</li>
+            </ol>
+        </div>
+
         <div class="row row-content">
             <div class="col">
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
@@ -189,9 +248,9 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="./events.html">Events</a></li>
+                        <li><a href="#">Events</a></li>
                         <li><a href="./contactus.html">Contact Us</a></li>
                     </ul>
                 </div>
