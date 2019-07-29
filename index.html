@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- endbuild -->
+    <link rel="icon" type="image/gif/png" href="img/logo.jpg">
     <title>Script Foundation</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top transparent">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -26,10 +27,10 @@
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.jpg" height="40" width="40"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./events.html"><span class="fa fa-list fa-lg"></span> Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Home"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#About"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Team"><span class="fa fa-list fa-lg"></span> Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Contact"><span class="fa fa-address-card fa-lg"></span> Contact Us</a></li>
                 </ul>
                 <span class="navbar-text">
                     <a data-toggle="modal" id="loginBtn">
@@ -76,12 +77,64 @@
         </div>
     </div>
 
+    <div class="modal fade" id="reserveTable" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Attend the Event</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="guest" class="col-12 col-sm-2 col-form-label">Number of Attendees</label>
+                            <div class="col-12 col-sm-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="dateTime" class="col-12 col-sm-2 col-form-label">Name and Email</label>
+                            <div class="col-12 col-sm-3">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+                            <div class="col-12 col-sm-3">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md">
+                                <button type="button" class="btn btn-danger" id="cancelReserveBtn">Cancel</button> 
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
                 <div class="col-12 col-sm-6">
                     <h1>Script Foundation</h1>
                     <p>We take inspiration from the World's best open source communities, and create a unique user experience.</p>
+                    <br><br><br>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg" id="reserveTableBtn" title="Or Call us at  &lt;+91-1234567890&gt;">Reserve Seat</button>
+                    </div>
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.jpg" class="img-fluid" height="300" width="300">
@@ -90,31 +143,30 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container" id="Home">
         <div class="row row-content">
             <div class="col">
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
+                            <img class="d-block img-fluid" src="img/android.jpg" alt="Android-Workshop">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2>Uthappizza<span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-default">$4.99</span></h2>
-                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>        
+                                <h2>Android Beginners Workshop<span class="badge badge-danger">Upcoming</span></h2>
+                                <p class="d-none d-sm-block">Script Presents Workshop Series from Experts. Now Learn Android from industry experts and implement in your development field and get the regognized letter and certificate from this workshop. </p>        
                             </div>    
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
+                            <img class="d-block img-fluid" src="img/iot.jpg" alt="IOT-Workshop">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2 class="mt-0">Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
-                                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                                <h2 class="mt-0">Internet of Things Workshop<span class="badge badge-danger">Upcoming</span></h2>
+                                <p class="d-none d-sm-block">Script Presents Workshop Series from Experts. Now Learn IoT from industry experts and implement in your development field and get the regognized letter and certificate from this workshop. </p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/alberto.png" alt="alberto">
+                            <img class="d-block img-fluid" src="img/debian.jpg" alt="Debian-Release">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2>Alberto Somayya</h2>
-                                <h4>Executive Chef</h4>
-                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>            
+                                <h2 class="mt-0">Debian 10(Buster) Release Party <span class="badge badge-pill badge-secondary">Over</span></h2>
+                                <p class="d-none d-sm-block">The party where the biggest devOPs groups in Delhi are going to meet. From newbies to experts all are coming together to learn,inspire and talk on Debian and cutting edge technologies. We would be looking forward to hearing your Dev Stories and Debian experiences and how that has shaped your actions, work, passion and maybe life in general. So come meet us for a day filled with amazing Tech talks and demos. </p>            
                             </div>
                         </div>
                     </div>
@@ -135,16 +187,17 @@
                 </div>
             </div>
         </div>
+
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
+                <h3>This Month's Workshops</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthappizza">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/android.jpg" alt="Android-Workshop">
                     <div class="media-body">
-                            <h2 class="mt-0">Uthappizza<span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                        <h2 class="mt-0">Android Beginners Workshop<span class="badge badge-danger">Upcoming</span></h2>
+                        <p class="d-none d-sm-block">Script Presents Workshop Series from Experts. Now Learn Android from industry experts and implement in your development field and get the regognized letter and certificate from this workshop. </p>
                     </div>        
                 </div>
             </div>
@@ -152,68 +205,429 @@
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-first col-md-3">
-                <h3>This Month's Promotions</h3>
+                <h3>This Month's Workshops</h3>
             </div>
             <div class="col col-sm order-sm-last col-md">
                 <div class="media">
                     <div class="media-body order-sm-first">
-                        <h2 class="mt-0">Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
-                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                        <h2 class="mt-0">Internet of Things Workshop<span class="badge badge-danger">Upcoming</span></h2>
+                        <p class="d-none d-sm-block">Script Presents Workshop Series from Experts. Now Learn IoT from industry experts and implement in your development field and get the regognized letter and certificate from this workshop. </p>            
                     </div>
-                    <img class="d-flex mr-3 img-thumbnail align-self-center order-sm-last" src="img/buffet.png" alt="buffet">        
+                    <img class="d-flex mr-3 img-thumbnail align-self-center order-sm-last" src="img/iot.jpg" alt="IOT-Workshop">
                 </div>
             </div>
         </div>
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
+                <h3>Previous Month's Workshops</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="alberto">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/debian.jpg" alt="Debian-Release">
                     <div class="media-body">
-                        <h2>Alberto Somayya</h2>
-                        <h4>Executive Chef</h4>
-                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>            
+                        <h2 class="mt-0">Debian 10(Buster) Release Party <span class="badge badge-pill badge-secondary">Over</span></h2>
+                        <p class="d-none d-sm-block">The party where the biggest devOPs groups in Delhi are going to meet. From newbies to experts all are coming together to learn,inspire and talk on Debian and cutting edge technologies. We would be looking forward to hearing your Dev Stories and Debian experiences and how that has shaped your actions, work, passion and maybe life in general. So come meet us for a day filled with amazing Tech talks and demos. </p>
+                    </div>        
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="About">
+            <div class="row row-header">
+                <ol class="col-12 breadcrumb">
+                    <li class="breadcrumb-item"><a href="#Home">Home</a></li>
+                    <li class="breadcrumb-item active">About Us</li>
+                </ol>
+                <div class="col-auto">
+                   <h3>About Us</h3>
+                   <hr>
+                </div>
+            </div>
+    
+            <div class="row row-content align-items-center">
+                <div class="col-12 col-sm-6">
+                    <h2>Our Vision</h2>
+                    <p>The idea to create this foundation is to develop a software which allows us <em>to run all programming languages in low end PC's</em> and open communities in every city so that tech enthusiast should learn something new and innovative. </p>
+                    <h2>Our Mission</h2>
+                    <p><em>Script Foundation's</em> mission is to promote the industry skills through which tech enthusiast are and should have a clarity  and move ahead to make something unique for this world. </p>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                        <h3 class="card-header bg-primary text-white">Facts at a glance</h3>
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-6">Started</dt>
+                                <dd class="col-6">21 Jul. 2019</dd>
+                                <dt class="col-6">Major Goal</dt>
+                                <dd class="col-6">Open Source</dd>
+                                <dt class="col-6">Contributors</dt>
+                                <dd class="col-6">40</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" id="Team">
+            <div class="row row-header">
+                <ol class="col-12 breadcrumb">
+                    <li class="breadcrumb-item"><a href="#Home">Home</a></li>
+                    <li class="breadcrumb-item active">Team</li>
+                </ol>
+                <div class="col-auto">
+                    <h3>Team</h3>
+                    <hr>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Raman Khokha<br>
+                    Co-founder & CEO
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Jai Sadana<br>
+                    Co-founder
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Nitesh Nagpal<br>
+                    Co-founder
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Hanut Kumar Arora<br>
+                    Co-founder
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Konark Baggal<br>
+                    Marketing Head and Blogger
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Ansh Malhotra<br>
+                    Designing Head
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Arpit Katri<br>
+                    Designing Head
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Sidharth Gupta<br>
+                    Management Head
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Jagmohan Singh<br>
+                    Speaker
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Harjot Phawa
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Nikhil Sachdeva<br>
+                    Android Developer and Speaker
+                </div>
+                <div class="col-sm">
+                    <img class="center"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Atin Gupta<br>
+                    Speaker
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Hitesh Kumar<br>
+                    Web Developer
+                </div>
+                <div class="col-sm">
+                    <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'"><br>
+                    Neelesh Bisht<br>
+                    Web Developer
+                </div>
+            </div>
+            <div class="row row-content">
+                <div class="col">
+                    <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Raman Khokha</h4><span>Co-Founder & CEO</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Jai Sadana</h4><span>Co-Founder</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Nitesh Nagpal</h4><span>Co-Founder</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Hanut Kumar Arora</h4><span>Co-Founder</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Konark Baggal</h4><span>Marketing Head & Blogger</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">    
+                                    <div class="team-title"><h4>Ansh Malhotra</h4><span>Designing Head</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Arpit Katri</h4><span>Designing Head</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Sidharth Gupta</h4><span>Management Head</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Jagmohan Singh</h4><span>Speaker</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Harjot Phawa</h4><span></span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Nikhil Sachdeva</h4><span>Android Developer & Speaker</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Atin Gupta</h4><span>Speaker</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Hitesh Kumar</h4><span>Web Developer</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid"src="#" onerror="this.src='img/profile.jpg'">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="team-title"><h4>Neelesh Bisht</h4><span>Web Developer</span></div>        
+                                    <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>    
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
+                            <span class="fa fa-pause"></span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="container" id="Contact">
+            <div class="row">
+                <ol class="col-12 breadcrumb">
+                    <li class="breadcrumb-item"><a href="#Home">Home</a></li>
+                    <li class="breadcrumb-item active">Contact Us</li>
+                </ol>
+                <div class="col-12">
+                   <h3>Contact Us</h3>
+                   <hr>
+                </div>
+            </div>
+    
+            <div class="row row-content">
+               <div class="col-12">
+                  <h3>Location Information</h3>
+               </div>
+                <div class="col-12 col-sm-4 offset-sm-1">
+                    <h5>Our Address</h5>
+                    <address style="font-size: 100%">
+                        Gurgaon<br>
+                        Haryana<br>
+                        India<br>
+                        <i class="fa fa-phone"></i> : +91-1234567890<br>
+                        <i class="fa fa-fax"></i> : +91-1234567890<br>
+                        <i class="fa fa-envelope"></i> : <a href="mailto:script@foundation.org">script@foundation.org</a>
+                    </address>
+                </div>
+                <div class="col-12 col-sm-6 offset-sm-1">
+                    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=76.53625488281251%2C28.16524320303279%2C77.17895507812501%2C28.585124669480816&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=11/28.3754/76.8576">View Larger Map</a></small>
+                </div>
+                <div class="col-12 col-sm-11 offset-sm-1">
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" href="tel: +852 1234 5678"><i class="fa fa-phone">Call</i></a>
+                        <a role="button" class="btn btn-info"><i class="fa fa-skype">Skype</i></a>
+                        <a role="button" class="btn btn-success" href="mailto:script@fdn.org"><i class="fa fa-envelope">Email</i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row row-content">
+               <div class="col-12">
+                  <h3>Send us your Feedback</h3>
+               </div>
+                <div class="col-12 col-md-9">
+                    <form>
+                        <div class="form-group row">
+                            <label for="firstname" class="col-md-2 col-form-label">First name</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lastname" class="col-md-2 col-form-label">Last name</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
+                            <div class="col-5 col-md-3">
+                                <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area Code">
+                            </div>
+                            <div class="col-7 col-md-7">
+                                <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. Number">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="emailid" class="col-md-2 col-form-label">Email</label>
+                            <div class="col-md-10">
+                                <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-2">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                                    <label class="form-check-label" for="approve">
+                                        <strong>May we contact you?</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 offset-md-1">
+                                <select class="form-control">
+                                    <option>Tel.</option>
+                                    <option>Email</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                            <div class="col-md-10">
+                                <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-primary">
+                                    Send Feedback
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-md">
+                </div>
+           </div>
+    
+        </div>
     </div>
 
     <footer class="footer">
         <div class="container">
-            <div class="row">             
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="./events.html">Events</a></li>
-                        <li><a href="./contactus.html">Contact Us</a></li>
-                    </ul>
+            <div class="row align-items-center"> 
+                <div class="col col-sm order-sm-first col-md">
+                    <img src="img/logo.jpg" alt="Logo" height="100" width="100">
                 </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-		              Gurgaon<br>
-		              Haryana<br>
-		              India<br>
-		              <i class="fa fa-phone fa-lg"></i> : +91-1234567890<br>
-                      <i class="fa fa-fax fa-lg"></i> : +91-1234567890<br>
-                      <i class="fa fa-envelope fa-lg"></i> : <a href="mailto:script@foundation.org">script@foundation.org</a>
-		           </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                <div class="col-12 col-sm-4 order-sm-last col-md" >
+                    <div class="text-right">
+                        <a class="btn btn-social-icon btn-telegram" href="#"><i class="fa fa-telegram"></i></a>
+                        <a class="btn btn-social-icon btn-github" href="#"><i class="fa fa-github"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon" href="#"><i class="fa fa-envelope-o"></i></a>
+                        <a class="btn btn-social-icon btn-meetup" href="#"><i class="fa fa-meetup"></i></a>
                     </div>
                 </div>
            </div>
