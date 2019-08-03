@@ -9,14 +9,23 @@
   min-height: 400px; }
 
 .footer {
-  background-color: #D1C4E9;
   margin: 0px auto;
-  padding: 20px 0px; }
+  padding: 50px;
+  background-image: url(/img/branding-script.jpg);
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  color: floralwhite; }
 
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #D1C4E9;
+  background-image: url(/img/3d-script.jpg);
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: black 0.3em 0.3em 0.3em;
   color: floralwhite; }
 
 address {
@@ -26,10 +35,11 @@ address {
 
 body {
   padding: 50px 0px 0px 0px;
-  z-index: 0; }
+  z-index: 0;
+  background-color: #d0d0d0 }
 
 .navbar-dark {
-  background-color: #512DA8; }
+  background-color: #424E5E; }
 
 .tab-content {
   border-left: 1px solid #ddd;
@@ -38,7 +48,8 @@ body {
   padding: 10px; }
 
 .carousel {
-  background: #512DA8; }
+  background: #424E5E;
+  text-shadow: black 0.3em 0.3em 0.3em; }
   .carousel .carousel-item {
     height: 300px; }
     .carousel .carousel-item img {
@@ -54,9 +65,20 @@ body {
 
 .modal-header {
   color: floralwhite;
-  background: #512DA8; }
+  background: #424E5E; }
   .modal-header button.close {
     color: floralwhite; }
 
 .modal-body {
-  background: #D1C4E9; }
+  background: #d0d0d0; }
+
+.fa-telegram {
+  color: rgb(0, 153, 255);
+  background-color: #ddd; }
+
+.fa-envelope {
+  color: white; }
+
+.fa-meetup {
+  color: red;
+  background-color: #ddd; }
